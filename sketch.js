@@ -1,6 +1,6 @@
 let myOrange = []; 
 let myTokomon;
-let amount = 50;
+let amount = 40;
 let img;
 
 function preload(){
@@ -41,8 +41,8 @@ class Orange{
         this.ypos = random(height);
         this.xspeed = random(1, 5);
         this.yspeed = random(1, 5);
-        this.r1 = 40;
-        this.r2 = 45;
+        this.r1 = 20;
+        this.r2 = 20;
     }
 
     display() { 
@@ -59,7 +59,7 @@ class Orange{
           this.r1 = 0;
         }
         if(this.c2 && this.d2 < 35){
-          this.r2 += 10;
+          this.r2 += 3;
         }   
     }
   
@@ -93,7 +93,7 @@ class Tokomon {
 
   display(){
     imageMode(CENTER);
-    image(img, this.tx, this.ty, 70, 70);
+    image(img, this.tx, this.ty, 50, 50);
     // this.tx = constrain(mouseX, 35, width-35);
     // this.ty = constrain(mouseY, 35, height-35);
   }
@@ -101,17 +101,6 @@ class Tokomon {
   move(){
     this.tx = constrain(mouseX, 35, width-35);
     this.ty = constrain(mouseY, 35, height-35);
-  //   if(keyIsDown(UP_ARROW)){
-  //     this.ty = this.ty - this.tspeed;
-  //   }
-  //   if(keyIsDown(DOWN_ARROW)){
-  //     this.ty = this.ty + this.tspeed;
-  //   }
-  //   if(keyIsDown(LEFT_ARROW)){
-  //     this.tx = this.tx - this.tspeed;
-  //   }
-  //   if(keyIsDown(RIGHT_ARROW)){
-  //     this.tx = this.tx + this.tspeed;
-  //   }
+
   }
 }
